@@ -2,6 +2,8 @@ from bs4 import BeautifulSoup
 import requests
 from openpyxl import load_workbook
 
+# TODO GUI with ability to specify path/update prices
+# TODO Add ability to view entries through GUI
 
 def getCardPrice(cardName, cardSet):
     formatted_name = cardName.replace(' ', '+')
