@@ -4,8 +4,8 @@ from openpyxl import load_workbook
 
 
 def getCardPrice(cardName, cardSet):
-    formatted_name = cardName.replace(' ', '+')
-    formatted_set = cardSet.replace(' ', '+')
+    formatted_name = cardName.replace(' ', '+').replace("'", '')
+    formatted_set = cardSet.replace(' ', '+').replace("'", '')
     target_url = 'https://www.mtggoldfish.com/price/' + formatted_set + '/' + formatted_name + '#online'
     target_page = request_page(target_url)
     price = priceScan(target_page.text)
